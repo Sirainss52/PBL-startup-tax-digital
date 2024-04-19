@@ -1,0 +1,180 @@
+.untitled-page.root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Set to 100vh to fill the viewport */
+  overflow: hidden;
+  position: relative;
+}
+
+.untitled-page .root1 {
+  background-color: white;
+  height: 100%;
+  width: 100%; /* Change to 100% */
+  position: absolute;
+}
+
+.untitled-page .group {
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+.untitled-page .root2 {
+  background: var(--src) center center/cover no-repeat; /* Updated background property */
+  min-height: 100vh; /* Set to 100vh to fill the viewport */
+  position: relative;
+}
+.untitled-page .rect1 {
+  background-color: rgb(253, 249, 249);
+  border-radius: 40px 40px 40px 40px;
+  height: 741px;
+  position: absolute;
+  right: 41px;
+  top: 60px;
+  width: 559px;
+}
+.untitled-page .group1 {
+  display: flex;
+  flex-direction: column;
+  margin: 60px 2.93% 103px auto;
+  position: relative;
+  width: 559px;
+}
+.untitled-page .group2 {
+  display: flex;
+  flex-direction: column;
+  min-height: 741px;
+  position: relative;
+}
+.untitled-page .flex_col {
+  display: flex;
+  flex-direction: column;
+  gap: 81px 0px;
+  height: 420px;
+  left: 46px;
+  position: absolute;
+  top: 242px;
+  width: 468px;
+}
+.untitled-page .flex_col1 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 33px 0px;
+}
+.untitled-page .flex_col2 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 13px 0px;
+  width: 100%;
+}
+.untitled-page .highlight {
+  color: rgb(0, 0, 0);
+  font: 400 16px/1.5 "Poppins", Helvetica, Arial, serif;
+  width: 100%;
+}
+.untitled-page .text {
+  border-radius: 9px 9px 9px 9px;
+  color: rgb(128, 128, 128);
+  font: 300 14px/1.5 "Poppins", Helvetica, Arial, serif;
+  outline: 1px solid rgb(173, 173, 173);
+  outline-offset: -1px;
+  padding: 19px 26px;
+  width: 100%;
+}
+
+.untitled-page .text1 {
+  border-radius: 9px 9px 9px 9px;
+  color: rgb(128, 128, 128);
+  font: 300 14px/1.5 "Poppins", Helvetica, Arial, serif;
+  outline: 1px solid rgb(173, 173, 173);
+  outline-offset: -1px;
+  padding: 19px 26px;
+  width: 100%;
+}
+
+.untitled-page .text:focus,
+.untitled-page .text1:focus {
+  outline: 1px solid #66afe9; /* Ganti warna highlight sesuai keinginan Anda */
+  box-shadow: 0 0 5px #66afe9; /* Tambahkan efek bayangan jika diinginkan */
+}
+.untitled-page .flex_col3 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 44px 0px;
+  margin: 0px 0px 0px auto;
+  width: 245px;
+}
+.untitled-page .text11 {
+  color: rgb(66, 133, 244);
+  display: flex;
+  font: 400 13px/1.53 "Poppins", Helvetica, Arial, serif;
+  justify-content: flex-end;
+  text-align: right;
+  width: 95.92%;
+}
+.untitled-page .highlight1 {
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  font: 500 16px/1.5 "Poppins", Helvetica, Arial, serif;
+  padding: 15px 97px 15px 94px;
+  width: 100%;
+  background-color: #66afe9;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.untitled-page .highlight1:hover {
+  background-color: #4c8de4;
+  box-shadow: 0px 6px 20px 0px rgba(119, 147, 65, 0.498);
+}
+
+.untitled-page .flex_row {
+  display: flex;
+  gap: 0px 10px;
+  height: 116px;
+  justify-content: space-between;
+  left: 46px;
+  position: absolute;
+  top: 44px;
+  width: 469px;
+}
+.untitled-page .flex_col4 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1px 0px;
+  width: 253px;
+}
+.untitled-page .subtitle {
+  color: rgb(0, 0, 0);
+  font: 400 21px/1.52 "Poppins", Helvetica, Arial, serif;
+}
+.untitled-page .hero_title {
+  color: rgb(0, 0, 0);
+  font: 500 55px/1.5 "Poppins", Helvetica, Arial, serif;
+  width: 100%;
+}
+.untitled-page .paragraph_box {
+  margin: 6px 0px 70px;
+  width: 90px;
+}
+.untitled-page .paragraph {
+  color: rgb(0, 0, 0);
+  font: 400 13px/1.53 "Poppins", Helvetica, Arial, serif;
+}
+.untitled-page .paragraph_span0 {
+  color: rgb(141, 141, 141);
+  font: 1em/1.53 "Poppins", Helvetica, Arial, serif;
+}
+.untitled-page .paragraph_span1 {
+  color: rgb(6, 53, 75);
+  font: 1em/1.53 "Poppins", Helvetica, Arial, serif;
+}
