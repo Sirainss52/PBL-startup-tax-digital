@@ -42,6 +42,7 @@
   margin-left: 0;
   margin-right: auto;
   margin-top: 20px;
+  --radius: 15px;
 }
 
 @media (max-width: 1199px) {
@@ -144,6 +145,7 @@
   margin-left: 0;
   margin-right: auto;
   margin-top: 20px;
+  --radius: 15px;
 }
 
 .u-section-2 .u-image-1 {

@@ -1,7 +1,7 @@
  .u-section-1 {
   background-image: url("/images/c01f215163a138a083885ff25dcca0b6e30227c0a7a9c89a75f0174ff5da238d9612b5261726496fa2d9833e4182b96ec88a4eb76b305aacce55a1_1280.jpg");
   background-position: 50% 50%;
-  min-height: 100vh;
+  min-height: 795px;
 }
 
 .u-section-1 .u-group-1 {
@@ -133,12 +133,12 @@
 
   .u-section-1 .u-text-1 {
     width: auto;
-    margin-top: 42px;
-    margin-left: 12px;
-    margin-right: 12px;
+    margin-top: 43px;
+    margin-left: auto;
   }
 
   .u-section-1 .u-text-2 {
+    margin-top: 28px;
     margin-left: auto;
   }
 

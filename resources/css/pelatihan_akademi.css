@@ -277,48 +277,84 @@
     min-height: 910px;
   }
 
+  .u-section-1 .u-container-layout-1 {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
   .u-section-1 .u-image-1 {
     width: 205px;
+    margin-left: 12px;
   }
 
   .u-section-1 .u-group-1 {
     width: 217px;
   }
 
+  .u-section-1 .u-container-layout-3 {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
   .u-section-1 .u-image-2 {
     width: 205px;
+    margin-left: 12px;
   }
 
   .u-section-1 .u-group-2 {
     width: 217px;
   }
 
+  .u-section-1 .u-container-layout-5 {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
   .u-section-1 .u-image-3 {
     width: 205px;
+    margin-left: 12px;
   }
 
   .u-section-1 .u-group-3 {
     width: 217px;
   }
 
+  .u-section-1 .u-container-layout-7 {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
   .u-section-1 .u-image-4 {
     width: 205px;
+    margin-left: 12px;
   }
 
   .u-section-1 .u-group-4 {
     width: 217px;
   }
 
+  .u-section-1 .u-container-layout-9 {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
   .u-section-1 .u-image-5 {
     width: 205px;
+    margin-left: 12px;
   }
 
   .u-section-1 .u-group-5 {
     width: 217px;
   }
 
+  .u-section-1 .u-container-layout-11 {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
   .u-section-1 .u-image-6 {
     width: 205px;
+    margin-left: 12px;
   }
 
   .u-section-1 .u-group-6 {
@@ -327,13 +363,16 @@
 }
 
 @media (max-width: 991px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 2378px;
+  }
+
   .u-section-1 .u-text-1 {
     margin-top: 764px;
   }
 
   .u-section-1 .u-list-1 {
-    margin-top: -673px;
-    margin-bottom: -617px;
+    margin-top: 20px;
   }
 
   .u-section-1 .u-repeater-1 {
@@ -391,12 +430,23 @@
 }
 
 @media (max-width: 767px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 3032px;
+  }
+
   .u-section-1 .u-text-1 {
     font-size: 2.25rem;
+    width: auto;
+    margin-top: 0;
+    margin-left: 0;
   }
 
   .u-section-1 .u-list-1 {
-    margin-top: -670px;
+    margin-top: 22px;
+  }
+
+  .u-section-1 .u-repeater-1 {
+    min-height: 2208px;
   }
 
   .u-section-1 .u-container-layout-1 {
@@ -503,14 +553,21 @@
 }
 
 @media (max-width: 575px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 3086px;
+  }
+
   .u-section-1 .u-text-1 {
-    margin-top: 1548px;
     font-size: 1.875rem;
   }
 
   .u-section-1 .u-list-1 {
-    margin-top: -1479px;
-    margin-bottom: -717px;
+    margin-top: 20px;
+    margin-bottom: -1px;
+  }
+
+  .u-section-1 .u-repeater-1 {
+    min-height: 3034px;
   }
 
   .u-section-1 .u-container-layout-1 {
@@ -524,8 +581,9 @@
   }
 
   .u-section-1 .u-group-1 {
-    min-height: 177px;
-    margin-top: 20px;
+    min-height: 186px;
+    margin-top: -1px;
+    margin-bottom: -38px;
     margin-right: initial;
     margin-left: initial;
     width: auto;
@@ -551,8 +609,9 @@
   }
 
   .u-section-1 .u-group-2 {
-    min-height: 177px;
-    margin-top: 20px;
+    min-height: 186px;
+    margin-top: -1px;
+    margin-bottom: -38px;
     margin-right: initial;
     margin-left: initial;
     width: auto;
@@ -574,8 +633,9 @@
   }
 
   .u-section-1 .u-group-3 {
-    min-height: 177px;
-    margin-top: 20px;
+    min-height: 186px;
+    margin-top: -1px;
+    margin-bottom: -38px;
     margin-right: initial;
     margin-left: initial;
     width: auto;
@@ -597,8 +657,9 @@
   }
 
   .u-section-1 .u-group-4 {
-    min-height: 177px;
-    margin-top: 20px;
+    min-height: 186px;
+    margin-top: -1px;
+    margin-bottom: -38px;
     margin-right: initial;
     margin-left: initial;
     width: auto;
@@ -620,8 +681,9 @@
   }
 
   .u-section-1 .u-group-5 {
-    min-height: 177px;
-    margin-top: 20px;
+    min-height: 186px;
+    margin-top: -1px;
+    margin-bottom: -38px;
     margin-right: initial;
     margin-left: initial;
     width: auto;
@@ -643,8 +705,9 @@
   }
 
   .u-section-1 .u-group-6 {
-    min-height: 177px;
-    margin-top: 20px;
+    min-height: 186px;
+    margin-top: -1px;
+    margin-bottom: -38px;
     margin-right: initial;
     margin-left: initial;
     width: auto;
