@@ -83,8 +83,8 @@
     </div>
   </section>
 
-
-  @section('footer')
+@endsection
+@section('footer')
   <footer class="u-align-center-sm u-align-center-xs u-border-2 u-border-grey-75 u-border-no-bottom u-border-no-left u-border-no-right u-clearfix u-footer u-grey-15" id="sec-05d2">
     <div class="u-clearfix u-sheet u-sheet-1">
       <div class="data-layout-selected u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">

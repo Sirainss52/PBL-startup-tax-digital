@@ -47,7 +47,7 @@
                 <input type="text" placeholder="Enter your email" id="username-a30d" name="username" class="u-grey-5 u-input u-input-rectangle u-radius u-input-1" required="">
               </div>
               <div class="u-form-group u-form-partition-factor-2 u-form-group-2">
-                <label for="text-26c0" class="u-custom-font u-heading-font u-label">username</label>
+                <label for="text-26c0" class="u-custom-font u-heading-font u-label">Name</label>
                 <input type="text" id="text-26c0" name="text" class="u-grey-5 u-input u-input-rectangle u-radius u-input-2" placeholder="Enter your username">
               </div>
               <div class="u-form-group u-form-partition-factor-2 u-form-group-3">

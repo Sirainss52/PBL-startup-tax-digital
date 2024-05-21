@@ -42,7 +42,7 @@
         <div class="u-form u-login-control u-form-1">
           <form action="#" class="u-clearfix u-form-custom-backend u-form-spacing-20 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 30px;" method="post">
             <div class="u-form-group u-form-name">
-              <label for="username-a30d" class="u-custom-font u-heading-font u-label">Username </label>
+              <label for="username-a30d" class="u-custom-font u-heading-font u-label">Email </label>
               <input type="text" placeholder="Enter your Username" id="username-a30d" name="username" class="u-grey-5 u-input u-input-rectangle u-radius u-input-1" required="">
             </div>
             <div class="u-form-group u-form-password">
