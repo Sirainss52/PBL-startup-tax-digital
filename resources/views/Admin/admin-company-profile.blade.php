@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,7 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Admin</title>
   <link rel="stylesheet" href="{{ asset('css/styles.min.css')}}" />
-  <script src="https://unpkg.com/feather-icons"></script><script class="u-script" type="text/javascript" src="{{ asset('js/admin.js') }}" defer=""></script>
+  <script class="u-script" type="text/javascript" src="{{ asset('js/admin.js') }}" defer=""></script>
+  <script type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
+  <style>
+    #saveButton {
+      display: none; /* Initially hide the save button */
+    }
+  </style>
 </head>
 
 <body>
@@ -152,7 +158,7 @@
                   <span class="hide-menu">Logout</span>
                 </a>
               </li>
-            </ul> 
+            </ul>
           </ul>
         </nav>
         <!-- End Sidebar navigation -->
@@ -185,11 +191,11 @@
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown" aria-expanded="false">
-                  <img src="images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle">
+                  <img src="images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle" />
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
                   <div class="message-body">
-                    <a href="My-profile.html" class="d-flex align-items-center gap-2 dropdown-item">
+                    <a href="" class="d-flex align-items-center gap-2 dropdown-item">
                       <i class="ti ti-user fs-6"></i>
                       <p class="mb-0 fs-3">My Profile</p>
                     </a>
@@ -201,7 +207,7 @@
                       <i class="ti ti-list-check fs-6"></i>
                       <p class="mb-0 fs-3">My Task</p>
                     </a>
-                    <a href="{{ url('/admin-login')}}" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                    <a href="{{ url('/admin-login') }}" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
                   </div>
                 </div>
               </li>
@@ -209,74 +215,53 @@
           </div>
         </nav>
       </header>
-      <!--  Header End -->
+      <!-- End Header -->
       <div class="container-fluid">
-        <div class="container-fluid">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title fw-semibold mb-4">News</h5>
-              <a href="{{url('/admin-news.create')}}" class="btn btn-primary"><i data-feather="plus"></i> tambah berita</a>
-              <a href="{{ url('/admin-news.edit')}}" class="btn btn-warning">Edit berita <i  data-feather="edit"></i></a>
-              <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapusModal" data-bs-whatever="@hapus">Hapus berita <i style="color: white;" data-feather="trash"></i></a>
-              <div class="modal fade" id="hapusModal" tabindex="-1" aria-labelledby="hapusModallabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="hapusModallabel">Hapus berita </h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <form>
-                        <div class="mb-3">
-                          <p> apakah anda yakin ingin menghapus berita ini ? </p>
-                        </div>
-                      </form>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">batalkan</button>
-                      <button type="button" class="btn btn-danger">yakin</button>
-                    </div>
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title fw-semibold mb-4">Company profile</h2>
+            <div class="card">
+              <div class="card-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="title" class="form-label">judul</label>
+                    <input type="text" class="form-control" id="title" aria-describedby="emailName" disabled>
                   </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="table-responsive">
-                  <table class="table table-bordered">
-                    <thead>
-                      <tr>
-                        <th scope="col">NO</th>
-                        <th scope="col">title</th>
-                        <th scope="col">deskripsi</th>
-                        <th scope="col">Date</th>
-                        <th scope="col">Category</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Loremipsum</td>
-                        <td>sunday ,13 august 2020</td>
-                        <td>Tax</td>
-                      </tr>
-                  </table>
-                </div>
+                  <div class="mb-3">
+                    <label for="logo" class="form-label">Profile logo</label>
+                    <input type="file" class="form-control" id="logo" disabled>
+                    <img src="images/logos/logo-rounded.png" class="img-fluid img-thumbnail mt-3" style="max-width: 150px;">
+                  </div>
+                  <div class="mb-3">
+                    <label for="deskripsi" class="form-label">deskripsi</label>
+                    <input type="text" class="form-control" id="deskripsi" aria-describedby="emailHelp" disabled>
+                  </div>
+                  <div class="mb-3">
+                    <label for="contact" class="form-label">Contact</label>
+                    <input type="text" class="form-control" id="contact" disabled>
+                  </div>
+                  <div class="mb-3">
+                    <label for="address" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="address" disabled>
+                  </div>
+                  <button type="button" class="btn btn-primary" id="editButton">Edit</button>
+                  <button type="submit" class="btn btn-secondary" id="saveButton" disabled>Save</button>
+                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script src="{{ asset('libs/jquery/dist/jquery.min.js') }}"></script>
-    <script src="{{ asset('libs/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('js/sidebarmenu.js') }}"></script>
-    <script src="{{ asset('js/app.min.js') }}"></script>
-    <script src="{{ asset('libs/apexcharts/dist/apexcharts.min.js') }}"></script>
-    <script src="{{ asset('libs/simplebar/dist/simplebar.js') }}"></script>
-    <script src="{{ asset('js/dashboard.js') }}"></script>
-    <script>
-      feather.replace();
-    </script>
+  </div>
+  <script src="{{ asset('libs/jquery/dist/jquery.min.js') }}"></script>
+  <script src="{{ asset('libs/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('js/sidebarmenu.js') }}"></script>
+  <script src="{{ asset('js/app.min.js') }}"></script>
+  <script src="{{ asset('libs/apexcharts/dist/apexcharts.min.js') }}"></script>
+  <script src="{{ asset('libs/simplebar/dist/simplebar.js') }}"></script>
+  <script src="{{ asset('js/dashboard.js') }}"></script>
+  <script src="{{ asset('js/company.js') }}"></script>
 </body>
 
 </html>

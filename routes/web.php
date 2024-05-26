@@ -71,3 +71,67 @@ Route::get('/admin-pelatihan', function () {
 Route::get('/admin-kegiatan', function () {
     return view('/Admin.admin-kegiatan');
 });
+Route::get('/admin-company-profile', function () {
+    return view('/Admin.admin-company-profile');
+});
+Route::get('/admin-tag', function () {
+    return view('/Admin.admin-tag');
+});
+
+// create
+Route::get('/admin-akademi.create', function () {
+    return view('/Admin.CRUD.create-akademi');
+});
+Route::get('/admin-news.create', function () {
+    return view('/Admin.CRUD.create-news');
+});
+Route::get('/admin-user.create', function () {
+    return view('/Admin.CRUD.create-user');
+});
+Route::get('/admin-kegiatan.create', function () {
+    return view('/Admin.CRUD.create-kegiatan');
+});
+Route::get('/admin-pelatihan.create', function () {
+    return view('/Admin.CRUD.create-pelatihan');
+});
+Route::get('/admin-publikasi.create', function () {
+    return view('/Admin.CRUD.create-publikasi');
+});
+Route::get('/admin-subscriber.create', function () {
+    return view('/Admin.CRUD.create-subscriber');
+});
+Route::get('/admin-riset.create', function () {
+    return view('/Admin.CRUD.create-riset');
+});
+Route::get('/admin-konsultasi.create', function () {
+    return view('/Admin.CRUD.create-konsultasi');
+});
+
+// edit
+Route::get('/admin-akademi.edit', function () {
+    return view('/Admin.CRUD.edit-akademi');
+});
+Route::get('/admin-news.edit', function () {
+    return view('/Admin.CRUD.edit-news');
+});
+Route::get('/admin-user.edit', function () {
+    return view('/Admin.CRUD.edit-user');
+});
+Route::get('/admin-kegiatan.edit', function () {
+    return view('/Admin.CRUD.edit-kegiatan');
+});
+Route::get('/admin-pelatihan.edit', function () {
+    return view('/Admin.CRUD.edit-pelatihan');
+});
+Route::get('/admin-publikasi.edit', function () {
+    return view('/Admin.CRUD.edit-publikasi');
+});
+Route::get('/admin-subscriber.edit', function () {
+    return view('/Admin.CRUD.edit-subscriber');
+});
+Route::get('/admin-riset.edit', function () {
+    return view('/Admin.CRUD.edit-riset');
+});
+Route::get('/admin-konsultasi.edit', function () {
+    return view('/Admin.CRUD.edit-konsultasi');
+});

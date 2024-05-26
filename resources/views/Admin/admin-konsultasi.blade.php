@@ -7,6 +7,7 @@
   <title>Admin</title>
   <link rel="stylesheet" href="{{ asset('css/styles.min.css')}}" />
   <script src="https://unpkg.com/feather-icons"></script>
+  <script class="u-script" type="text/javascript" src="{{ asset('js/admin.js') }}" defer=""></script>
 </head>
 
 <body>
@@ -28,109 +29,135 @@
         <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
           <ul id="sidebarnav">
             <li class="nav-small-cap">
-              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">Home</span>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="{{ url('/admin-index') }}" aria-expanded="false">
-                <span>
-                  <i class="ti ti-layout-dashboard"></i>
-                </span>
-                <span class="hide-menu">Dashboard</span>
+              <a id="homeToggle" class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                <span style="color: black;" class="hide-menu">Home</span>
               </a>
             </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="{{ url('/admin-user') }}" aria-expanded="false">
-                <span>
-                  <i class="ti ti-user"></i>
-                </span>
-                <span class="hide-menu">User</span>
+            <ul id="homeMenu" class="collapse first-level show" aria-expanded="true">
+              <li class="sidebar-item">
+                <a href="{{ url('/admin-index') }}" class="sidebar-link">
+                  <span>
+                    <i class="ti ti-layout-dashboard"></i>
+                  </span>
+                  <span class="hide-menu">Dashboard</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a href="{{ url('/admin-company-profile') }}" class="sidebar-link">
+                  <span>
+                    <i class="ti ti-user"></i>
+                  </span>
+                  <span class="hide-menu">Profile Company</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a href="{{ url('/admin-user') }}" class="sidebar-link">
+                  <span>
+                    <i class="ti ti-user"></i>
+                  </span>
+                  <span class="hide-menu">User</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="{{ url('/admin-subscribe') }}" aria-expanded="false">
+                  <span>
+                    <i class="ti ti-cards"></i>
+                  </span>
+                  <span class="hide-menu">Subcriber</span>
+                </a>
+              </li>
+            </ul>
+            <li class="nav-small-cap">
+              <a id="pageToggle" class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                <span style="color: black;" class="hide-menu">Page</span>
               </a>
             </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="{{ url('/admin-subscribe') }}" aria-expanded="false">
-                <span>
-                  <i class="ti ti-cards"></i>
-                </span>
-                <span class="hide-menu">Subcriber</span>
+            <ul id="pageMenu" class="collapse second-level show" aria-expanded="true">
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="{{ url('/admin-news') }}" aria-expanded="false">
+                  <span>
+                    <i class="ti ti-news"></i>
+                  </span>
+                  <span class="hide-menu">News</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="{{ url('/admin-publikasi') }}" aria-expanded="false">
+                  <span>
+                    <i class="ti ti-book"></i>
+                  </span>
+                  <span class="hide-menu">publikasi</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="{{ url('/admin-question') }}" aria-expanded="false">
+                  <span>
+                    <i class="ti ti-question-mark"></i>
+                  </span>
+                  <span class="hide-menu">Question</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="{{ url('/admin-akademi') }}" aria-expanded="false">
+                  <span>
+                    <i class="ti ti-typography"></i>
+                  </span>
+                  <span class="hide-menu">Akademi</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="{{ url('/admin-riset') }}" aria-expanded="false">
+                  <span>
+                    <i class="ti ti-search"></i>
+                  </span>
+                  <span class="hide-menu">Riset</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="{{ url('/admin-konsultasi') }}" aria-expanded="false">
+                  <span>
+                    <i class="ti ti-heart-handshake"></i>
+                  </span>
+                  <span class="hide-menu">Konsultasi</span>
+                </a>
+              </li>
+            </ul>
+            <!-- collapse level 3 -->
+            <li class="nav-small-cap">
+              <a id="lastpageToggle" class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="true">
+                <span style="color: black;" class="hide-menu">last page</span>
               </a>
             </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="{{ url('/admin-news') }}" aria-expanded="false">
-                <span>
-                  <i class="ti ti-news"></i>
-                </span>
-                <span class="hide-menu">News</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="{{ url('/admin-publikasi') }}" aria-expanded="false">
-                <span>
-                  <i class="ti ti-book"></i>
-                </span>
-                <span class="hide-menu">publikasi</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="{{ url('/admin-question') }}" aria-expanded="false">
-                <span>
-                  <i class="ti ti-question-mark"></i>
-                </span>
-                <span class="hide-menu">Question</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="{{ url('/admin-akademi') }}" aria-expanded="false">
-                <span>
-                  <i class="ti ti-typography"></i>
-                </span>
-                <span class="hide-menu">Akademi</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="{{ url('/admin-riset') }}" aria-expanded="false">
-                <span>
-                  <i class="ti ti-search"></i>
-                </span>
-                <span class="hide-menu">Riset</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="{{ url('/admin-konsultasi') }}" aria-expanded="false">
-                <span>
-                  <i class="ti ti-heart-handshake"></i>
-                </span>
-                <span class="hide-menu">Konsultasi</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="{{ url('/admin-pelatihan') }}" aria-expanded="false">
-                <span>
-                <i class="ti ti-notebook"></i>
-                </span>
-                <span class="hide-menu">Pelatihan</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="{{ url('/admin-kegiatan') }}" aria-expanded="false">
-                <span>
-                <i class="ti ti-trekking"></i>
-                </span>
-                <span class="hide-menu">kegiatan</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="{{ url('/admin-login') }}" aria-expanded="false">
-                <span>
-                  <i class="ti ti-logout"></i>
-                </span>
-                <span class="hide-menu">Login</span>
-              </a>
-            </li>
+            <ul id="lastpageMenu" class="collapse third-level show" aria-expanded="true">
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="{{ url('/admin-pelatihan') }}" aria-expanded="false">
+                  <span>
+                    <i class="ti ti-notebook"></i>
+                  </span>
+                  <span class="hide-menu">Pelatihan</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="{{ url('/admin-kegiatan') }}" aria-expanded="false">
+                  <span>
+                    <i class="ti ti-trekking"></i>
+                  </span>
+                  <span class="hide-menu">kegiatan</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="{{ url('/admin-login') }}" aria-expanded="false">
+                  <span>
+                    <i class="ti ti-logout"></i>
+                  </span>
+                  <span class="hide-menu">Logout</span>
+                </a>
+              </li>
+            </ul>
           </ul>
         </nav>
         <!-- End Sidebar navigation -->
-      </div>
+      </div>s
       <!-- End Sidebar scroll-->
     </aside>
     <!--  Sidebar End -->
@@ -154,13 +181,16 @@
           </ul>
           <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
             <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
+              <li class="nav-item">
+                <p class="mb-0">admin</p>
+              </li>
               <li class="nav-item dropdown">
                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown" aria-expanded="false">
-                  <img src="images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle">
+                  <img src="images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle" />
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
                   <div class="message-body">
-                    <a href="My-profile.html" class="d-flex align-items-center gap-2 dropdown-item">
+                    <a href="" class="d-flex align-items-center gap-2 dropdown-item">
                       <i class="ti ti-user fs-6"></i>
                       <p class="mb-0 fs-3">My Profile</p>
                     </a>
@@ -172,7 +202,7 @@
                       <i class="ti ti-list-check fs-6"></i>
                       <p class="mb-0 fs-3">My Task</p>
                     </a>
-                    <a href="{{ url('/admin-login')}}" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                    <a href="{{ url('/admin-login') }}" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
                   </div>
                 </div>
               </li>
@@ -185,7 +215,7 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title fw-semibold mb-4">Konsultasi</h5>
-            <a class="btn btn-primary"><i data-feather="edit"></i> Tambah Konsultasi </a>
+            <a href="{{ url('/admin-konsultasi.create')}}" class="btn btn-primary"><i data-feather="edit"></i> Tambah Konsultasi </a>
             <div class="card">
               <div class="table-responsive">
                 <table class="table">
@@ -207,8 +237,29 @@
                       <td>apakah-itu-lorem-ipsum.png</td>
                       <td>1-1-2024</td>
                       <td>
-                        <a class="btn btn-warning"> Edit <i data-feather="edit"></i></a>
-                        <a class="btn btn-danger"> hapus <i data-feather="trash"></i> </a>
+                        <a href="{{ url('/admin-konsultasi.edit')}}" class="btn btn-warning">Edit <i data-feather="edit"></i></a>
+                        <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapusModal" data-bs-whatever="@hapus">Hapus <i style="color: white;" data-feather="trash"></i></a>
+                        <div class="modal fade" id="hapusModal" tabindex="-1" aria-labelledby="hapusModallabel" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="hapusModallabel">Hapus konsultasi </h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <form>
+                                  <div class="mb-3">
+                                    <p> apakah anda yakin ingin menghapus konsultasi ini ? </p>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">batalkan</button>
+                                <button type="button" class="btn btn-danger">yakin</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </td>
                     </tr>
                 </table>

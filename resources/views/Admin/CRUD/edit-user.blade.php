@@ -4,9 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Admin</title>
+  <title>Admin - Edit User</title>
   <link rel="stylesheet" href="{{ asset('css/styles.min.css')}}" />
-  <script src="https://unpkg.com/feather-icons"></script><script class="u-script" type="text/javascript" src="{{ asset('js/admin.js') }}" defer=""></script>
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.8/dist/trix.css">
+  <script type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script class="u-script" type="text/javascript" src="{{ asset('js/admin.js') }}" defer=""></script>
 </head>
 
 <body>
@@ -17,8 +20,8 @@
       <!-- Sidebar scroll-->
       <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
-          <a href="{ url('/admin-index') }}" class="text-nowrap logo-img">
-            <img src="images/logos/logo.png" width="220" alt="" />
+          <a href="{{ url('/admin-index') }}" class="text-nowrap logo-img">
+            <img src="images/logos/logo.png" width="220" alt="Logo" />
           </a>
           <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
             <i class="ti ti-x fs-8"></i>
@@ -62,7 +65,7 @@
                   <span>
                     <i class="ti ti-cards"></i>
                   </span>
-                  <span class="hide-menu">Subcriber</span>
+                  <span class="hide-menu">Subscriber</span>
                 </a>
               </li>
             </ul>
@@ -85,7 +88,7 @@
                   <span>
                     <i class="ti ti-book"></i>
                   </span>
-                  <span class="hide-menu">publikasi</span>
+                  <span class="hide-menu">Publikasi</span>
                 </a>
               </li>
               <li class="sidebar-item">
@@ -124,7 +127,7 @@
             <!-- collapse level 3 -->
             <li class="nav-small-cap">
               <a id="lastpageToggle" class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="true">
-                <span style="color: black;" class="hide-menu">last page</span>
+                <span style="color: black;" class="hide-menu">Last Page</span>
               </a>
             </li>
             <ul id="lastpageMenu" class="collapse third-level show" aria-expanded="true">
@@ -141,7 +144,7 @@
                   <span>
                     <i class="ti ti-trekking"></i>
                   </span>
-                  <span class="hide-menu">kegiatan</span>
+                  <span class="hide-menu">Kegiatan</span>
                 </a>
               </li>
               <li class="sidebar-item">
@@ -152,7 +155,7 @@
                   <span class="hide-menu">Logout</span>
                 </a>
               </li>
-            </ul> 
+            </ul>
           </ul>
         </nav>
         <!-- End Sidebar navigation -->
@@ -185,7 +188,7 @@
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown" aria-expanded="false">
-                  <img src="images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle">
+                  <img src="images/profile/user-1.jpg" alt="Profile" width="35" height="35" class="rounded-circle">
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
                   <div class="message-body">
@@ -209,74 +212,101 @@
           </div>
         </nav>
       </header>
-      <!--  Header End -->
+      <!-- End Header -->
       <div class="container-fluid">
-        <div class="container-fluid">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title fw-semibold mb-4">News</h5>
-              <a href="{{url('/admin-news.create')}}" class="btn btn-primary"><i data-feather="plus"></i> tambah berita</a>
-              <a href="{{ url('/admin-news.edit')}}" class="btn btn-warning">Edit berita <i  data-feather="edit"></i></a>
-              <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapusModal" data-bs-whatever="@hapus">Hapus berita <i style="color: white;" data-feather="trash"></i></a>
-              <div class="modal fade" id="hapusModal" tabindex="-1" aria-labelledby="hapusModallabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="hapusModallabel">Hapus berita </h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <form>
-                        <div class="mb-3">
-                          <p> apakah anda yakin ingin menghapus berita ini ? </p>
-                        </div>
-                      </form>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">batalkan</button>
-                      <button type="button" class="btn btn-danger">yakin</button>
-                    </div>
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title fw-semibold mb-4">Edit User</h2>
+            <div class="card">
+              <div class="card-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="name">
                   </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="table-responsive">
-                  <table class="table table-bordered">
-                    <thead>
-                      <tr>
-                        <th scope="col">NO</th>
-                        <th scope="col">title</th>
-                        <th scope="col">deskripsi</th>
-                        <th scope="col">Date</th>
-                        <th scope="col">Category</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Loremipsum</td>
-                        <td>sunday ,13 august 2020</td>
-                        <td>Tax</td>
-                      </tr>
-                  </table>
-                </div>
+                  <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="username">
+                  </div>
+                  <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password">
+                  </div>
+                  <div class="mb-3">
+                    <label for="image" class="form-label">Foto</label>
+                    <input type="file" class="form-control" id="image" name="image">
+                  </div>
+                  <div class="mb-3">
+                    <label for="date" class="form-label">Tanggal Dibuat</label>
+                    <input type="date" class="form-control" id="date" name="date">
+                  </div>
+                  <div class="mb-3">
+                    <label for="role" class="form-label"> select role</label>
+                    <select id="Select" class="form-select">
+                      <option> Admin</option>
+                    </select>
+                  </div>
+                  <button type="submit" class="btn btn-primary" id="saveButton">Save</button>
+                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script src="{{ asset('libs/jquery/dist/jquery.min.js') }}"></script>
-    <script src="{{ asset('libs/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('js/sidebarmenu.js') }}"></script>
-    <script src="{{ asset('js/app.min.js') }}"></script>
-    <script src="{{ asset('libs/apexcharts/dist/apexcharts.min.js') }}"></script>
-    <script src="{{ asset('libs/simplebar/dist/simplebar.js') }}"></script>
-    <script src="{{ asset('js/dashboard.js') }}"></script>
-    <script>
-      feather.replace();
-    </script>
+  </div>
+  <script src="{{ asset('libs/jquery/dist/jquery.min.js') }}"></script>
+  <script src="{{ asset('libs/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('js/sidebarmenu.js') }}"></script>
+  <script src="{{ asset('js/app.min.js') }}"></script>
+  <script src="{{ asset('libs/apexcharts/dist/apexcharts.min.js') }}"></script>
+  <script src="{{ asset('libs/simplebar/dist/simplebar.js') }}"></script>
+  <script src="{{ asset('js/dashboard.js') }}"></script>
+  <script>
+    // Function to change button color based on form input
+    function changeButtonColor() {
+      const nameInput = document.getElementById('name');
+      const usernameInput = document.getElementById('username');
+      const passwordInput = document.getElementById('password');
+      const imageInput = document.getElementById('image');
+      const dateInput = document.getElementById('date');
+      const roleInput = document.getElementById('role');
+      const saveButton = document.getElementById('saveButton');
+
+      // Update button color function
+      function updateButtonColor() {
+        const name = nameInput.value.trim();
+        const username = usernameInput.value.trim();
+        const password = passwordInput.value.trim();
+        const image = imageInput.value.trim();
+        const date = dateInput.value.trim();
+        const role = roleInput.value.trim();
+
+        // Change button color based on input
+        if (name !== '' && username !== '' && password !== '' && image !== '' && date !== '' && role !== '') {
+          saveButton.classList.remove('btn-secondary');
+          saveButton.classList.add('btn-primary');
+        } else {
+          saveButton.classList.remove('btn-primary');
+          saveButton.classList.add('btn-secondary');
+        }
+      }
+
+      // Add event listeners to form inputs
+      nameInput.addEventListener('input', updateButtonColor);
+      usernameInput.addEventListener('input', updateButtonColor);
+      passwordInput.addEventListener('input', updateButtonColor);
+      imageInput.addEventListener('input', updateButtonColor);
+      dateInput.addEventListener('input', updateButtonColor);
+      roleInput.addEventListener('input', updateButtonColor);
+
+      // Initial call to set button color
+      updateButtonColor();
+    }
+
+    // Call function on document ready
+    document.addEventListener('DOMContentLoaded', changeButtonColor);
+  </script>
 </body>
 
 </html>
