@@ -243,7 +243,7 @@
                             <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content">
                                 <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="hapusModallabel">Hapus tag</h1>
+                                  <h1 class="modal-title fs-5" id="hapusModallabel">Hapus user</h1>
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
@@ -280,24 +280,6 @@
   <script src="{{ asset('js/dashboard.js') }}"></script>
   <script>
     feather.replace();
-  </script>
-  <script>
-const hapusModal = document.getElementById('hapusModal')
-if (hapusModal) {
-    hapusModal.addEventListener('show.bs.modal', event => {
-    // Button that triggered the modal
-    const button = event.relatedTarget
-    // Extract info from data-bs-* attributes
-    const recipient = button.getAttribute('data-bs-whatever')
-    // If necessary, you could initiate an Ajax request here
-    // and then do the updating in a callback.
-
-    // Update the modal's content.
-    const modalTitle = hapusModal.querySelector('.modal-title')
-
-    modalTitle.textContent = `Hapus user ? `
-  })
-}
   </script>
 </body>
 
