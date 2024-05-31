@@ -26,7 +26,7 @@
                   <div class="u-container-layout u-valign-middle u-container-layout-2">
                     <h2 class="u-align-left u-text u-text-default u-text-1">Hot news </h2>
                     <p class="u-align-left u-text u-text-2">Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
-                    <a href="#" class="u-align-left u-btn u-button-style u-palette-1-base u-btn-1">Button</a>
+                    <a href="{{ url('/Detail-berita') }}" class="u-align-left u-btn u-button-style u-palette-1-base u-btn-1">Button</a>
                   </div>
                 </div>
               </div>
