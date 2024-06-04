@@ -33,6 +33,9 @@ Route::get('/register', function () {
 Route::get('/Riset', function () {
     return view('/Riset');
 });
+Route::get('/Detail-berita', function () {
+    return view('/detail_berita');
+});
 
 
 Route::get('/admin-index', function () {
