@@ -44,7 +44,6 @@
                   <div class="u-container-layout u-valign-middle u-container-layout-6">
                     <h3 class="u-align-left u-text u-text-6"> Join the community</h3>
                     <p class="u-align-left u-text u-text-7"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p class="u-align-left u-text u-text-8">Image from&nbsp;<a href="https://www.freepik.com/" class="u-border-1 u-border-active-grey-60 u-border-black u-border-hover-grey-60 u-border-no-left u-border-no-right u-border-no-top u-btn u-button-link u-button-style u-none u-text-body-color u-btn-3" target="_blank">Freepik</a>
                     </p>
                     <a href="#" class="u-border-radius-0 u-btn u-button-style u-custom-color-4 u-custom-font u-font-oswald u-hover-custom-color-2 u-btn-4">Learn More</a>
                   </div>

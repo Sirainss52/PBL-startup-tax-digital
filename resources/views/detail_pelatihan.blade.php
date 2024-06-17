@@ -1,20 +1,30 @@
 @extends('layouts.mainlayout')
-@section('title', 'detail_berita')
+@section('title', 'detail_pelatihan')
 @section('content')
 <section class="u-align-center u-clearfix u-section-1" id="sec-cadd">
     <div class="u-clearfix u-sheet u-sheet-1">
         <!--post_details--><!--post_details_options_json--><!--{"source":""}--><!--/post_details_options_json--><!--blog_post-->
         <div class="u-container-style u-expanded-width u-post-details u-post-details-1">
-            <div class="u-container-layout u-container-layout-1">
-                <!--blog_post_image-->
-                <a class="u-post-header-link" href="/blog/post-7.html"><img alt="" class="u-blog-control u-expanded-width u-image u-image-default u-text-default-lg u-text-default-md u-text-default-sm u-text-default-xs u-image-1" src="/images/0fd3416c.jpeg" /></a><!--/blog_post_image--><!--blog_post_header-->
-                <h2 class="u-blog-control u-text u-text-1">
-                    <a class="u-post-header-link" href="/blog/post-7.html">Post 7</a>
-                </h2>
+            <div class="u-container-layout u-valign-top u-container-layout-1">
+                <div class="u-align-left u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-video u-video-1">
+                    <div class="embed-responsive embed-responsive-1">
+                        <iframe style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                  " class="embed-responsive-item" src="https://www.youtube.com/embed/L-hm3S1aSnI?mute=0&amp;showinfo=0&amp;controls=0&amp;start=0" frameborder="0" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+                <!--blog_post_header-->
+                <h3 class="u-blog-control u-text u-text-1">
+                    <a class="u-post-header-link" href="/blog/post-6.html">Post 6</a>
+                </h3>
                 <!--/blog_post_header--><!--blog_post_metadata-->
                 <div class="u-blog-control u-metadata u-text-grey-30 u-metadata-1">
                     <!--blog_post_metadata_date-->
-                    <span class="u-meta-date u-meta-icon">Jun 14, 2024</span><!--/blog_post_metadata_date--><!--blog_post_metadata_category-->
+                    <span class="u-meta-date u-meta-icon">Apr 18, 2024</span><!--/blog_post_metadata_date--><!--blog_post_metadata_category-->
                     <!--/blog_post_metadata_category--><!--blog_post_metadata_comments-->
                     <!--/blog_post_metadata_comments-->
                 </div>
@@ -82,7 +92,7 @@
 <section class="u-align-center u-clearfix u-section-3" id="sec-b0ab">
     <div class="u-clearfix u-sheet u-sheet-1">
         <h2 class="u-align-left u-text u-text-default u-text-1">
-            Related News :
+            Playlist Course :
         </h2>
         <div class="u-expanded-width u-layout-horizontal u-list u-list-1">
             <div class="u-repeater u-repeater-1">
@@ -162,27 +172,6 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
         </div>
     </div>
 </section>
-<!-- Button to open the form -->
-<button class="fixed-button " onclick="openForm()">Pertanyaan ?</button>
-
-  <!-- Form popup -->
-  <div class="form-popup" id="myForm">
-    <form action="/submit" class="form-container">
-      <h2 class="u-align-center form-head">Inquiry form</h2>
-
-      <label for="email"><b>Nama</b></label>
-      <input type="text" placeholder="Masukkan Nama" name="name" required>
-
-      <label for=""><b>Email</b></label>
-      <input type="text" placeholder="Masukkan Email" name="Email" required>
-
-      <label for=""><b>Pertanyaan</b></label>
-      <input type="text" placeholder="Masukkan Pertanyaan" name="Question" required>
-
-      <button type="submit" class="btn ">Submit</button>
-      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-    </form>
-  </div>
 @endsection
 @section('footer')
 <footer class="u-align-center-sm u-align-center-xs u-border-3 u-border-black u-border-no-bottom u-border-no-left u-border-no-right u-clearfix u-custom-color-2 u-footer" id="sec-05d2">

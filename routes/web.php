@@ -36,6 +36,25 @@ Route::get('/Riset', function () {
 Route::get('/Detail-berita', function () {
     return view('/detail_berita');
 });
+Route::get('/Detail-pelatihan', function () {
+    return view('/detail_pelatihan');
+});
+Route::get('/Detail-about', function () {
+    return view('/detail_about');
+});
+Route::get('/Detail-kegiatan', function () {
+    return view('/detail_kegiatan');
+});
+Route::get('/Detail-konsultasi', function () {
+    return view('/detail_konsultasi');
+});
+Route::get('/Detail-riset', function () {
+    return view('/detail_riset');
+});
+Route::get('/Detail-publikasi', function () {
+    return view('/detail_publikasi');
+});
+
 
 
 Route::get('/admin-index', function () {

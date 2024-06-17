@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Admin</title>
   <link rel="stylesheet" href="{{ asset('css/styles.min.css')}}" />
-  <script src="https://unpkg.com/feather-icons"></script>\
+  <script src="https://unpkg.com/feather-icons"></script>
   <script class="u-script" type="text/javascript" src="{{ asset('js/admin.js') }}" defer=""></script>
 </head>
 

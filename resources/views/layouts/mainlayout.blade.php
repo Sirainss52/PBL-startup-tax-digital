@@ -11,10 +11,17 @@
   <link rel="stylesheet" href="css/@yield('title').css" media="screen">
   <script class="u-script" type="text/javascript" src="{{ asset('js/jquery.js') }}" defer=""></script>
   <script class="u-script" type="text/javascript" src="{{ asset('js/nicepage.js') }}" defer=""></script>
-  <meta name="generator" content="Nicepage 6.8.8, nicepage.com">
+  <script class="u-script" type="text/javascript" src="{{ asset('js/detail.js') }}" defer=""></script>
+  <script src="https://unpkg.com/feather-icons"></script>
   <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
   <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
   <script type="application/ld+json">
     {
       "@context": "http://schema.org",
@@ -30,38 +37,6 @@
   <meta data-intl-tel-input-cdn-path="intlTelInput/">
 </head>
 
-<body data-path-to-root="/" data-include-products="true" class="u-body u-xl-mode" data-lang="en">
-  <!DOCTYPE html>
-  <html style="font-size: 16px" lang="en">
-
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="utf-8" />
-    <meta name="keywords" content="Lorem ipsum​, ​Some finansial strategic and Avoiding costly mistakes, ​Positive, modern, science-based training, Startup tax digital​, ​Join Startup Tax Digital&nbsp;Courses., our demo of​​ the course​, INTUITIVE" />
-    <meta name="description" content="" />
-    <title>Home</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen" />
-    <link rel="stylesheet" href="Home.css" media="screen" />
-    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
-    <meta name="generator" content="Nicepage 6.8.8, nicepage.com" />
-    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" />
-    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Inknut+Antiqua:300,400,500,600,700,800,900|Cabin:400,400i,500,500i,600,600i,700,700i" />
-
-    <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "Organization",
-        "name": "",
-        "logo": "/images/second.png",
-        "sameAs": []
-      }
-    </script>
-    <meta name="theme-color" content="#478ac9" />
-    <meta property="og:title" content="Home" />
-    <meta property="og:type" content="website" />
-    <meta data-intl-tel-input-cdn-path="intlTelInput/" />
-  </head>
 
   <body data-path-to-root="/" data-include-products="true" class="u-body u-xl-mode" data-lang="en">
     <header class="u-border-no-bottom u-border-no-left u-border-no-right u-border-no-top u-header u-section-row-container" id="sec-e1e5" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
@@ -199,7 +174,7 @@
                     <div class="u-nav-popup">
                       <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-6">
                         <li class="u-nav-item">
-                          <a class="u-button-style u-nav-link u-white">new page</a>
+                          <a href="{{ url ('Tag')}}" class="u-button-style u-nav-link u-white">categori/tag</a>
                         </li>
                         <li class="u-nav-item">
                           <a class="u-button-style u-nav-link u-white">new page</a>
@@ -216,22 +191,21 @@
                 </ul>
               </div>
               <div class="u-custom-menu u-nav-container-collapse">
-                <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+                <div class="u-white u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
                   <div class="u-inner-container-layout u-sidenav-overflow">
                     <div class="u-menu-close"></div>
-                    <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-7">
+                    <ul class="u-align-left u-nav u-popupmenu-items u-unstyled u-nav-7">
                       <li class="u-nav-item">
-                        <a class="u-button-style u-nav-link" href="{{ url('/') }}">Home</a
-                        >
+                        <a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="{{ url('/') }}">Home</a>
                       </li>
                       <li class="u-nav-item">
-                          <a class="u-button-style u-nav-link" href="{{ url('/About') }}">About</a>
+                        <a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="{{ url('/About') }}">About</a>
                       </li>
                       <li class="u-nav-item">
-                        <a class="u-button-style u-nav-link" href="{{ url('/Contact') }}">Contact</a>
+                        <a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="{{ url('/Contact') }}">Contact</a>
                       </li>
                       <li class="u-nav-item">
-                        <a class="u-button-style u-nav-link" href="{{ url('/Konsultasi') }}">Konsultasi</a>
+                        <a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="{{ url('/Konsultasi') }}">Konsultasi</a>
                         <div class="u-nav-popup">
                           <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-8">
                             <li class="u-nav-item">
@@ -250,7 +224,7 @@
                         </div>
                       </li>
                       <li class="u-nav-item">
-                        <a class="u-button-style u-nav-link" href="{{ url('/Riset') }}">Riset</a>
+                        <a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="{{ url('/Riset') }}">Riset</a>
                         <div class="u-nav-popup">
                           <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-9">
                             <li class="u-nav-item">
@@ -269,7 +243,7 @@
                         </div>
                       </li>
                       <li class="u-nav-item">
-                        <a class="u-button-style u-nav-link"href="{{ url('/Publikasi') }}">Publikasi</a>
+                        <a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="{{ url('/Publikasi') }}">Publikasi</a>
                         <div class="u-nav-popup">
                           <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-10">
                             <li class="u-nav-item">
@@ -288,9 +262,9 @@
                         </div>
                       </li>
                       <li class="u-nav-item">
-                        <a class="u-button-style u-nav-link"href="{{ url('/Akademi') }}">Akademi</a>
+                        <a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="{{ url('/Akademi') }}">Akademi</a>
                         <div class="u-nav-popup">
-                          <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-11">
+                          <ul class="u-h-spacing-10 u-nav u-unstyled u-v-spacing-10 u-nav-11">
                             <li class="u-nav-item">
                               <a class="u-button-style u-nav-link">new page</a>
                             </li>
@@ -307,7 +281,7 @@
                         </div>
                       </li>
                       <li class="u-nav-item">
-                        <a class="u-button-style u-nav-link" href="{{ url('/Berita') }}">Berita</a>
+                        <a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="{{ url('/Berita') }}">Berita</a>
                         <div class="u-nav-popup">
                           <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-12">
                             <li class="u-nav-item">
@@ -337,6 +311,9 @@
     </header>
     @yield('content')
     @yield('footer')
+    <script>
+    feather.replace();
+  </script>
   </body>
 
   </html>
