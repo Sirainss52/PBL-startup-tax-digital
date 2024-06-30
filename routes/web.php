@@ -54,9 +54,6 @@ Route::get('/Detail-riset', function () {
 Route::get('/Detail-publikasi', function () {
     return view('/detail_publikasi');
 });
-Route::get('/Profile-user', function () {
-    return view('/Profile');
-});
 
 
 
