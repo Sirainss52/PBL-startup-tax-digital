@@ -1,0 +1,68 @@
+footer h3 {
+  color: white;
+}
+/* Navbar Brand */
+.navbar-brand {
+  margin-right: 100px; /* Menggeser brand ke kiri */
+}
+
+/* Profile Image and Text */
+.profile {
+  position: relative;
+  text-align: center; /* Mengatur teks ke tengah */
+}
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.profile:hover img {
+  opacity: 0.5;
+}
+
+.change-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(11, 10, 10);
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.image-wrapper:hover .change-text {
+  opacity: 1;
+}
+
+/* Form Group Margin */
+.form-group.mt-2 {
+  margin-bottom: 1rem; /* Adjusted margin */
+}
+  /* Custom CSS for adding underline */
+  #sidebar h2{
+    border-bottom: 1px solid #131010;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+ /* Navbar Link */
+.navbar-nav .nav-item .nav-link {
+  transition: background-color 0.3s, color 0.3s; /* Transisi untuk background dan warna teks */
+  padding: 8px 0;
+  display: block;
+  color: black; /* Warna teks default */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  background-color: #06354b; /* Warna latar belakang saat dihover */
+  color: white !important; /* Warna teks saat dihover */
+}
